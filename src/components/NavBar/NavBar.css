@@ -1,0 +1,24 @@
+.navBar {
+    display: flex;
+    justify-content: center;
+}
+
+.navBar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+.navBar ul li a {
+    color: var(--color_white);
+    font-size: 24px;
+    transition: 0.3s all ease;
+}
+
+.navBar ul li a:hover {
+    opacity: 0.5;
+}
+
+.navBar ul li a.active {
+    color: var(--color_pink);
+}
