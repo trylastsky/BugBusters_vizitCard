@@ -1,10 +1,4 @@
 
-.logo {
-  transition: filter 300ms;
-  transition: 1s all ease;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 0.5em var(--color_pink));
-  opacity: 0.90;
-}
+
+
 

@@ -7,8 +7,10 @@ const MainPage: React.FC = () => {
     return (
         <>
             <div className="main container">
+                <div className="block-1">
                 <NavBar />
                 <VizitCard></VizitCard>
+                </div>
             </div>
         </>
     );

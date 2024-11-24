@@ -11,7 +11,6 @@ const OrderForm:React.FC<OrderFormProps> = ({setToggleOrderForm}) => {
         <div className="order-form">
         <div className="order">
             <button onClick={() => setToggleOrderForm(false)}><img/></button>
-                
             </div>
         </div>
     </>);

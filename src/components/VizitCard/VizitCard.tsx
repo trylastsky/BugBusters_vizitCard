@@ -18,8 +18,8 @@ const VizitCard: React.FC = () => {
             intervalId = setInterval(() => {
                 setFadeClass("fade-out"); // Начинаем анимацию исчезновения
                 setTimeout(() => {
-                    setCurrentValue(prevValue => {
-                        console.log("Выполнено")
+                    setCurrentValue((prevValue) => {
+                        console.log("Выполнено");
                         const currentIndex = values.indexOf(prevValue);
                         const nextIndex = (currentIndex + 1) % values.length;
                         return values[nextIndex];
@@ -35,18 +35,38 @@ const VizitCard: React.FC = () => {
     return (
         <WithIntersectionObserver onVisibilityChange={setIsVisible}>
             <div className="vizit-card">
-                <div className="left">
-                    <div className="text-block">
-                        <h1>Bug Busters</h1>
-                        <h2>
-                            Команда <span className="symbols">{"<"}<span className="pixel pink">web</span>{"/>"}</span>  разработчиков
-                        </h2>
+                <div className="top-bar">
+
+
+                    <div className="left">
+                        <div className="text-block">
+                            <h1>Bug Busters</h1>
+                            <h2>
+                                Команда{" "}
+                                <span className="symbols">
+                                    {"<"}
+                                    <span className="pixel pink">web</span>
+                                    {"/>"}
+                                </span>{" "}
+                                разработчиков
+                            </h2>
+                        </div>
                     </div>
-                    <Button />
+                    <div
+                        className="right"
+                        style={{
+                            alignItems:
+                                currentValue === values[values.length - 1]
+                                    ? "center"
+                                    : "flex-start",
+                        }}
+                    >
+                        <img className="logo" src={logo} alt="logo" />
+                    </div>
                 </div>
-                <div className="right" style={{alignItems: currentValue === values[values.length - 1] ? "center" : "flex-start"}} >
-                    <img className="logo" src={logo} alt="logo" />
-                    <h3 >
+                <div className="bottom-bar">
+                    <Button />
+                    <h3>
                         Мы ценим <span className={"pink " + fadeClass}>{currentValue}</span>
                     </h3>
                 </div>

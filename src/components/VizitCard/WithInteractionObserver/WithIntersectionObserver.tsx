@@ -1,6 +1,4 @@
-// src/WithIntersectionObserver.tsx
-
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 
 interface Props {
     onVisibilityChange: (isVisible: boolean) => void;
@@ -17,13 +15,16 @@ const WithIntersectionObserver: React.FC<Props> = ({ onVisibilityChange, childre
             });
         });
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        // Сохраним текущее значение ref.current
+        const currentRef = ref.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef); // Используем сохраненное значение
             }
         };
     }, [onVisibilityChange]);
