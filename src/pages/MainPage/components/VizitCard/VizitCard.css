@@ -37,12 +37,13 @@
 .vizit-card .top-bar .right .logo {
     transition: filter 300ms;
     transition: 1s all ease;
-    width: 487px; /* фиксированная ширина для десктопа */
+    width: 487px;
+    /* фиксированная ширина для десктопа */
 }
 
 .logo:hover {
     filter: drop-shadow(0 0 0.5em var(--color_pink));
-    opacity: 0.90;
+    opacity: 0.9;
 }
 
 .pixel {
@@ -56,14 +57,13 @@
     justify-content: space-between;
 }
 
-
 .vizit-card .bottom-bar h3 {
     flex-grow: 1;
     font-weight: 300;
     width: 100px;
     font-size: 36px;
     text-wrap: nowrap;
-    max-width:480px;
+    max-width: 480px;
 }
 
 /* Анимации */
@@ -79,6 +79,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -88,99 +89,117 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
 
-
-
 /* Адаптивные стили */
 @media (max-width: 1280px) {
     .vizit-card .top-bar .left .text-block h1 {
-        font-size: 96px; 
+        font-size: 96px;
     }
+
     .vizit-card .top-bar .left .text-block h2 {
         font-size: 48px;
     }
+
     .vizit-card .top-bar .right .logo {
-        width: 400px; 
+        width: 400px;
     }
+
     .vizit-card .bottom-bar h3 {
         font-size: 32px;
         max-width: 400px;
     }
+
     .navBar ul li a {
         font-size: 20px;
     }
+
     .vizit-card .top-bar .left span.symbols {
         font-size: 46px;
     }
+
     .pixel {
         font-size: 48px;
     }
 }
 
-
-
 @media (max-width: 980px) {
     .vizit-card .top-bar .left .text-block h1 {
-        font-size: 64px; 
+        font-size: 64px;
     }
+
     .vizit-card .top-bar .left .text-block h2 {
         width: 300px;
         font-size: 32px;
     }
+
     .vizit-card .top-bar .right .logo {
-        width: 300px; 
+        width: 300px;
     }
+
     .vizit-card .bottom-bar h3 {
-        font-size: 24px; 
+        font-size: 24px;
         max-width: 290px;
     }
+
     .vizit-card.button {
         width: 280px;
         height: 80px;
     }
+
     .vizit-card.button p {
         font-size: 28px;
     }
-        .vizit-card .top-bar .left span.symbols {
+
+    .vizit-card .top-bar .left span.symbols {
         font-size: 36px;
     }
+
     .pixel {
         font-size: 32px;
     }
-    
 }
 
 @media (max-width: 780px) {
 
-    
-    .vizit-card .top-bar, .vizit-card .bottom-bar {
+    .vizit-card .top-bar,
+    .vizit-card .bottom-bar {
         flex-direction: column-reverse;
-        align-items: center;    
+        align-items: center;
+    }
+
+    .vizit-card .top-bar .left .text-block {
+        align-items: center;
     }
 
     .vizit-card {
         gap: 35px;
     }
+
     .vizit-card .bottom-bar h3 {
         text-align: start;
-        font-size: 24px; 
+        font-size: 24px;
         width: 100%;
     }
+
     .vizit-card .bottom-bar {
         gap: 15px;
         align-items: center;
     }
 
     .vizit-card .bottom-bar .button {
-        font-size: 20px; 
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .vizit-card .top-bar .left .text-block {
+        align-items: center;
+    }
 
     .navBar ul li a {
         font-size: 16px;
@@ -192,11 +211,10 @@
 
     .vizit-card .top-bar .left .text-block h1 {
         font-size: 56px;
-      }
+    }
 
     .vizit-card .bottom-bar h3 {
         font-size: 20px;
         max-width: 250px;
     }
 }
-

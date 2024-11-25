@@ -1,0 +1,119 @@
+.pop-up-case {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 356px;
+}
+
+/* Основные стили для поп-апа */
+.pop-up-case-info {
+    position: relative;
+    z-index: 0;
+    max-width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color_white);
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    gap: 10px;
+}
+
+.pop-up-case-info p {
+    color: var(--color_gray);
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.pop-up-case-info.active {
+    background-color: var(--color_pink);
+    opacity: 0.5;
+}
+
+.pop-up-case-info.active p {
+    color: var(--color_white);
+}
+
+.pop-up-case-info.active img {
+    filter: brightness(0) invert(1);
+    /* Альтернатива для изменения цвета svg*/
+}
+
+.pop-up-case-info img {
+    width: 42px;
+    height: auto;
+}
+
+.pop-up-case-info.active+.description {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    visibility: hidden;
+}
+
+.description {
+    position: relative;
+    z-index: 999;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    background-color: var(--color_white);
+}
+
+.description p {
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--color_gray);
+}
+
+/* Адаптивные стили */
+@media (max-width: 1280px) {
+    .pop-up-case {
+        max-width: 300px;
+        height: 80px;
+    }
+
+    .pop-up-case-info img {
+        width: 30px;
+    }
+
+    .pop-up-case-info p {
+        font-size: 28px;
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .pop-up-case {
+        width: 250px;
+    }
+
+    .description {
+        max-height: 250px;
+    }
+
+    .pop-up-case-info p {
+        font-size: 22px;
+    }
+
+    .pop-up-case-info img {
+        width: 24px;
+    }
+}
+

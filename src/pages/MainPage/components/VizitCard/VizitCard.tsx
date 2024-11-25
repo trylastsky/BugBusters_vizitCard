@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/icons/Logo.svg"; // логотип
-import Button from "./Button/Button";
+import logo from "../../../../assets/icons/Logo.svg";
+import Button from "./components/Button/Button";
 import "./VizitCard.css";
 import valuesData from "./VizitCard.json"; // Импортируем JSON-файл
-import WithIntersectionObserver from "./WithInteractionObserver/WithIntersectionObserver"; // Импортируем созданный компонент
+import WithIntersectionObserver from "./components/WithInteractionObserver/WithIntersectionObserver"; // Импортируем созданный компонент
 
 const VizitCard: React.FC = () => {
     const values = valuesData.values; // Массив ценностей
@@ -19,7 +19,6 @@ const VizitCard: React.FC = () => {
                 setFadeClass("fade-out"); // Начинаем анимацию исчезновения
                 setTimeout(() => {
                     setCurrentValue((prevValue) => {
-                        console.log("Выполнено");
                         const currentIndex = values.indexOf(prevValue);
                         const nextIndex = (currentIndex + 1) % values.length;
                         return values[nextIndex];
@@ -36,8 +35,6 @@ const VizitCard: React.FC = () => {
         <WithIntersectionObserver onVisibilityChange={setIsVisible}>
             <div className="vizit-card">
                 <div className="top-bar">
-
-
                     <div className="left">
                         <div className="text-block">
                             <h1>Bug Busters</h1>
