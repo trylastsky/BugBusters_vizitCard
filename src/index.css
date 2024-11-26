@@ -14,6 +14,7 @@
     background: linear-gradient(180deg, #232323 0%, #1a1d24 11%);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* variables */
@@ -28,12 +29,12 @@
     --font_montserrat: "Montserrat", sans-serif;
     --font_inria-sans: "Inria Sans", sans-serif;
     --font_pixel-sans: "Pixelify Sans", sans-serif;
+    --font_montserrat-alt: "Montserrat Alternates", serif;
 }
 
 a {
     text-decoration: none;
 }
-
 
 .container {
     max-width: 1370px;
@@ -55,3 +56,16 @@ a {
     color: var(--color_gray);
 }
 
+h1 {
+    font-family: var(--font_monsterrat);
+    font-weight: 400;
+    font-size: 64px;
+    color: var(--color_white);
+}
+
+
+@media (max-width: 860px) {
+    h1 {
+        font-size: 48px;
+    }
+}

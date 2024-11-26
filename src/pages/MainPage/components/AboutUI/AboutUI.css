@@ -1,0 +1,11 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.about-ui {
+   display: flex;
+   gap: 35px;
+}

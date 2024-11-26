@@ -3,14 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    
 }
 
-.show-case h1 {
-    font-family:  var(--font_montserrat);
-    font-weight: 400;
-    font-size: 64px;
-}
 .show-case .flexbox {
     width: 100%;
     display: flex;
@@ -18,6 +12,17 @@
 }
 
 @media (max-width: 860px) {
+    .show-case .flexbox {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .show-case h1 {
+        font-size: 42px;
+    }
+
     .show-case .flexbox {
         flex-direction: column;
         align-items: center;

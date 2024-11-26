@@ -16,7 +16,7 @@ const PopUpInfoCase: React.FC<PopUpInfoCaseProps> = ({text, icon_src, descriptio
     };
     
     return(<>
-    <div className="pop-up-case">
+    <div className={`pop-up-case ${isOpen ? 'active' : ''}`}>
 
              <div className={`pop-up-case-info ${isOpen ? 'active' : ''}`} onClick={handleClick}>
                 <p>{text}</p>

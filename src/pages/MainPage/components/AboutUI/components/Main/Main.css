@@ -1,0 +1,13 @@
+.about-ui.main-bar {
+    max-width: 492px;
+    width: 50%;
+    height: 477px;
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: var(--color_white);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 19px;
+}

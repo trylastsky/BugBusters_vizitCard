@@ -3,6 +3,9 @@ import "./MainPage.css";
 import NavBar from "../../components/NavBar/NavBar";
 import VizitCard from "./components/VizitCard/VizitCard";
 import ShowCase from "./components/ShowCase/ShowCase";
+import AboutUI from "./components/AboutUI/AboutUI";
+import ProjectsUI from "./components/ProjectsUI/ProjectsUI";
+import Footer from "../../components/Footer/Footer";
 
 const MainPage: React.FC = () => {
     return (
@@ -13,6 +16,9 @@ const MainPage: React.FC = () => {
                     <VizitCard />
                 </div>
                 <ShowCase />
+                <AboutUI />
+                <ProjectsUI />
+                <Footer></Footer>
             </div>
         </>
     );

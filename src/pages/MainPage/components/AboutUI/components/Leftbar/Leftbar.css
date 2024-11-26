@@ -1,0 +1,13 @@
+.about-ui.left-bar {
+    max-width: 492px;
+    width: 100%;
+    height: 477px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    background-color: var(--color_white);
+}
