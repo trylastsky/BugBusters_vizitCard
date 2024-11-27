@@ -8,7 +8,7 @@
 
 Сначала склонируйте репозиторий на свой локальный компьютер:
 
-```git clone https://github.com/trylastsky/BugBusters_vizitCard```
+```git clone https://github.com/trylastsky/BugBusters_vizitCard.git```
 
 ### Шаг 2: Переход в директорию проекта
 
