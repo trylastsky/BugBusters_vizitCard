@@ -7,6 +7,7 @@ import AboutUI from "./components/AboutUI/AboutUI";
 import ProjectsUI from "./components/ProjectsUI/ProjectsUI";
 import Contacts from "./components/Contacts/Contacts";
 import Footer from "../../components/Footer/Footer";
+import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 import "./MainPage.css";
 
 const MainPage: React.FC = () => {
@@ -31,6 +32,7 @@ const MainPage: React.FC = () => {
           />
         </div>
       </div>
+<ScrollToTopButton></ScrollToTopButton>
     </>);
 };
 
