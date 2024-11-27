@@ -1,12 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent; /* Убрать выделение для мобильных браузеров */
+    outline: none; /* Удалить обводку */
 }
 
 :root {
     user-select: none;
     width: 100%;
-    height: flex;
     line-height: 1.5;
     font-weight: 400;
     font-family: var(--font_montserrat);
@@ -15,8 +16,6 @@
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     /* variables */
 
     /* colors */
@@ -32,8 +31,28 @@
     --font_montserrat-alt: "Montserrat Alternates", serif;
 }
 
+:root::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--color_white);
+  }
+  :root::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color_gray);
+  }
+  
+  :root::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--color_white);
+  }
+
 a {
     text-decoration: none;
+    color: var(--color_gray);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.85;
 }
 
 .container {
@@ -68,4 +87,32 @@ h1 {
     h1 {
         font-size: 48px;
     }
+}
+
+.button-default {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8.5px 20px;
+    border-radius: 20px;
+    background-color: var(--color_white);
+    transition: all 0.3s ease;
+    
+}
+
+.button-default p {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color_gray);
+}
+
+.button-default:hover {
+    opacity: 0.85;
+}
+
+.button-default:active {
+    transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+    opacity: 0.5;
 }

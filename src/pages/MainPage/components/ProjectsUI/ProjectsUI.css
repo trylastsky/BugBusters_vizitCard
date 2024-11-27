@@ -5,15 +5,33 @@
     gap: 50px;
 }
 
+.project-case {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-case button {
+    margin-left: auto;
+    max-width: 225px;
+}
+
 .projects-ui {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 11px;
-    color: black;
+    color: var(--color_gray);
+}
+
+.project-list-case {
+    display: flex;
+    gap: 11px;
 }
 
 .project-list {
-    width: 442px;
-    height: 624px;
+    width: 390px; 
+    height: 624px; 
     border-radius: 20px;
     padding: 20px; 
     background-color: var(--color_white);
@@ -30,7 +48,6 @@
     flex-direction: column;
     gap: 30px;
 }
-
 
 .project-list ul li {
     font-weight: 400;
@@ -50,15 +67,17 @@
     cursor: default;
 }
 
-
 .project-image {
-    max-width: 878px;         
+    max-width: 878px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;      
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: all 1s ease;
+    cursor: pointer;
 }
 
 .project-image:hover {
-    transform: scale(1.1);  
+    transform: scale(0.995);
 }
 
 .vertical-line {
@@ -70,10 +89,66 @@
     margin-bottom: 20px;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
+
+
+@media (max-width: 1440px) {
+    .projects-ui {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+    .project-case button {
+        margin: 0 auto;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .project-list {
+        height: auto;
+    }
+  
+    .project-list h2 {
+        font-size: 32px; 
+    }
+
+    .project-list ul li {
+        font-size: 28px;
+    }
+
     .project-image {
-        width: 100%;            
-        max-width: none;        
+        width: 90%; 
+    }
 }
+
+@media (max-width: 780px) {
+    .projects-ui {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-list {
+        width: 95%; 
+    }
+
+    .project-list h2 {
+        font-size: 28px; 
+    }
+
+    .project-list ul li {
+        font-size: 24px;
+    }
+    .project-image {
+        width: 100%; 
+    }
 }
+
+@media (max-width: 600px) {
+
+    .stulus {
+        display: none;
+    }
+    .project-list ul {
+        gap: 20px;
+    }
+}
+

@@ -1,13 +1,109 @@
 .about-ui.left-bar {
-    max-width: 492px;
-    width: 100%;
-    height: 477px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 20px;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color_white);
+}
+
+.about-ui.left-bar .vertical-line {
+    margin: 0;
+}
+
+.about-ui.left-bar p,
+.about-ui.left-bar h2,
+.about-ui.left-bar h3 {
+    color: var(--color_gray);
+}
+
+.about-ui.left-bar .logo-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.about-ui.left-bar .logo-container .case {
+    display: flex;
     flex-direction: column;
     gap: 17px;
-    background-color: var(--color_white);
+    width: 100%;
+    text-align: start;
+    height: auto;
+}
+
+.about-ui.left-bar .logo-container h2 {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.about-ui.left-bar .text-block p,
+.about-ui.left-bar .text-block h3 {
+    text-align: start;
+    font-size: 24px;
+}
+
+.about-ui.left-bar .text-block h3,
+.about-ui.left-bar .text-block .h3 {
+    font-weight: 500;
+}
+
+.about-ui.left-bar .text-block p {
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.about-ui.left-bar .text-block {
+    display: flex;
+    transform: translateY(-70px);
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+@media (max-width: 1028px) {
+    .about-ui.left-bar {
+        padding: 15px;
+    }
+
+    .about-ui.left-bar .logo-container h2 {
+        font-size: 28px;
+    }
+
+    .about-ui.left-bar .text-block {
+        top: 20%;
+        gap: 20px;
+    }
+
+    .about-ui.left-bar .text-block p,
+    .about-ui.left-bar .text-block h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-ui.left-bar .logo-container .case {
+        gap: 10px;
+    }
+
+    .about-ui.left-bar {
+        padding: 10px;
+    }
+
+    .about-ui.left-bar .logo-container h2 {
+        font-size: 24px;
+    }
+
+    .about-ui.left-bar .logo-container img {
+        width: 100px;
+    }
+
+    .about-ui.left-bar .text-block {
+        top: 15%;
+    }
+
+    .about-ui.left-bar .text-block p,
+    .about-ui.left-bar .text-block h3 {
+        font-size: 18px;
+    }
 }

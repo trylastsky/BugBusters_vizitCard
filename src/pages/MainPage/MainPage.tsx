@@ -1,27 +1,37 @@
-import "./MainPage.css";
+import { useState } from "react";
+import { NavBar, ActiveBlock } from "../../components/NavBar/NavBar"; // Импортируем ActiveBlock
 
-import NavBar from "../../components/NavBar/NavBar";
 import VizitCard from "./components/VizitCard/VizitCard";
 import ShowCase from "./components/ShowCase/ShowCase";
 import AboutUI from "./components/AboutUI/AboutUI";
 import ProjectsUI from "./components/ProjectsUI/ProjectsUI";
+import Contacts from "./components/Contacts/Contacts";
 import Footer from "../../components/Footer/Footer";
+import "./MainPage.css";
 
 const MainPage: React.FC = () => {
-    return (
-        <>
-            <div className="main container">
-                <div className="block-1">
-                    <NavBar />
-                    <VizitCard />
-                </div>
-                <ShowCase />
-                <AboutUI />
-                <ProjectsUI />
-                <Footer></Footer>
-            </div>
-        </>
-    );
+    const [activeBlock, setActiveBlock] = useState(ActiveBlock.about); //часть логики вынесена в Footer
+
+    return (<>
+    <div className="main container">
+        <div className="block-1">
+            <NavBar 
+                activeBlock={activeBlock} 
+                setActiveBlock={setActiveBlock}/> 
+            <VizitCard />
+        </div>
+            <ShowCase />
+            <AboutUI />
+            <ProjectsUI />
+        <div className="block-5">
+            <Contacts />
+            <Footer
+                activeBlock={activeBlock}
+                setActiveBlock={setActiveBlock}
+          />
+        </div>
+      </div>
+    </>);
 };
 
 export default MainPage;

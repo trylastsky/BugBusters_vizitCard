@@ -1,11 +1,78 @@
 .about {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     text-align: center;
+    gap: 50px;
 }
 
 .about-ui {
+    width: 100%;
    display: flex;
+   align-items: center;
+   justify-content: space-between;
    gap: 35px;
+}
+
+.about-ui.right-bar,
+.about-ui.left-bar {
+    width: 100%;
+    height: 100%;
+    max-width: 525px;
+    max-height: 477px;
+    transition: all 1s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about-ui.right-bar:hover,
+.about-ui.left-bar:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(241, 241, 241, 0.2);
+    animation: siyanie 5s infinite;
+}
+
+
+@keyframes siyanie {
+    0% {
+        box-shadow: 0 8px 20px rgba(241, 241, 241, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(241, 241, 241, 0.8);
+    }
+    100% {
+        box-shadow: 0 8px 20px rgba(241, 241, 241, 0.2);
+    }
+}
+
+
+@media (max-width: 860px) {
+    .about-ui {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-ui.right-bar .logo-container .case {
+        gap: 10px;
+    }
+
+    .about-ui.right-bar {
+        padding: 10px;
+    }
+
+    .about-ui.right-bar .logo-container h2 {
+        font-size: 24px;
+    }
+
+    .about-ui.right-bar .text-block {
+        margin-top: 15px;
+    }
+
+    .about-ui.right-bar .text-block p,
+    .about-ui.right-bar .text-block h3 {
+        font-size: 18px;
+    }
+
+    .about-ui.right-bar .text-block ul {
+        padding-left: 15px;
+    }
 }

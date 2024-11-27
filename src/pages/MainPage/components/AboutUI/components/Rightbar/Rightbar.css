@@ -1,13 +1,104 @@
 .about-ui.right-bar {
-    max-width: 492px;
-    width: 100%;
-    height: 477px;
     border-radius: 20px;
     padding: 20px;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color_white);
+    position: relative;
+}
+
+.about-ui.right-bar .vertical-line {
+    margin: 0;
+}
+
+.about-ui.right-bar p,
+.about-ui.right-bar h2,
+.about-ui.right-bar h3 {
+    color: var(--color_gray);
+}
+
+.about-ui.right-bar .logo-container {
+    display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 17px;
-    background-color: var(--color_white);
+}
+
+.about-ui.right-bar .logo-container .case {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; 
+    width: 100%;
+    text-align: start;
+    height: auto;
+}
+
+.about-ui.right-bar .logo-container h2 {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.about-ui.right-bar .text-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.about-ui.right-bar .text-block p,
+.about-ui.right-bar .text-block h3 {
+    text-align: start;
+    font-size: 24px;
+}
+
+.about-ui.right-bar .text-block h3,
+.about-ui.right-bar .text-block .h3 {
+    font-weight: 500;
+}
+
+.about-ui.right-bar .text-block p {
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.about-ui.right-bar .text-block ul {
+    list-style-type:circle; 
+    padding-left: 20px; 
+    margin: 0;
+    color: var(--color_gray);
+}
+
+.about-ui.right-bar .text-block ul li {
+    margin-bottom: 5px; 
+    text-align: left; 
+}
+
+/* Адаптивные стили */
+@media (max-width: 1028px) {
+    .about-ui.right-bar {
+        padding: 15px;
+    }
+
+    .about-ui.right-bar .logo-container h2 {
+        font-size: 28px;
+    }
+
+    .about-ui.right-bar .text-block {
+        gap: 20px;
+    }
+
+    .about-ui.right-bar .text-block p,
+    .about-ui.right-bar .text-block h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+   
+}
+
+@media (max-width: 480px) {
+
 }

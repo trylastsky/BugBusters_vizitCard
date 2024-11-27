@@ -1,7 +1,6 @@
 .main {
     display: grid;
     height: flex;
-    grid-template-rows: repeat(8, 1fr);
     row-gap: 220px;
 }
 
@@ -10,3 +9,11 @@
     flex-direction: column;
     gap: 100px;
 }
+
+.main .block-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 220px;
+    padding-bottom: 15px;
+}
+

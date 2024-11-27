@@ -38,7 +38,6 @@
     transition: filter 300ms;
     transition: 1s all ease;
     width: 487px;
-    /* фиксированная ширина для десктопа */
 }
 
 .logo:hover {
@@ -216,5 +215,35 @@
     .vizit-card .bottom-bar h3 {
         font-size: 20px;
         max-width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .vizit-card {
+        padding: 0;
+    }
+
+    .vizit-card .top-bar,
+    .vizit-card .bottom-bar {
+        align-items: center; 
+    }
+
+    .vizit-card .top-bar .left .text-block h1 {
+        font-size: 48px;
+        text-align: center; 
+    }
+
+    .vizit-card .top-bar .left .text-block h2 {
+        font-size: 24px; 
+        text-align: center; 
+    }
+
+    .vizit-card .top-bar .right .logo {
+        width: 200px;
+    }
+
+    .vizit-card .bottom-bar h3 {
+        font-size: 18px; 
+
     }
 }
