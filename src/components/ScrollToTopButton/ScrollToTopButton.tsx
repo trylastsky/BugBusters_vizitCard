@@ -32,7 +32,7 @@ const ScrollToTopButton: React.FC = () => {
         <div>
             {isVisible && (
                 <button className="scroll-to-top" onClick={handleScrollToTop}>
-                    &circ;
+                    ⇑
                 </button>
             )}
         </div>
