@@ -1,6 +1,4 @@
 .about-ui.right-bar {
-    border-radius: 20px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -10,6 +8,7 @@
 
 .about-ui.right-bar .vertical-line {
     margin: 0;
+    margin-top: 17px;
 }
 
 .about-ui.right-bar p,
@@ -22,7 +21,6 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 17px;
 }
 
 .about-ui.right-bar .logo-container .case {
@@ -73,32 +71,4 @@
 .about-ui.right-bar .text-block ul li {
     margin-bottom: 5px; 
     text-align: left; 
-}
-
-/* Адаптивные стили */
-@media (max-width: 1028px) {
-    .about-ui.right-bar {
-        padding: 15px;
-    }
-
-    .about-ui.right-bar .logo-container h2 {
-        font-size: 28px;
-    }
-
-    .about-ui.right-bar .text-block {
-        gap: 20px;
-    }
-
-    .about-ui.right-bar .text-block p,
-    .about-ui.right-bar .text-block h3 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-   
-}
-
-@media (max-width: 480px) {
-
 }

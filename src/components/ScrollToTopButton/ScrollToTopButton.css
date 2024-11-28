@@ -1,18 +1,21 @@
 .scroll-to-top {
+    display: flex;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--color_pink);
-    color: var(--color_white);
-    border: none;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 24px;
     cursor: pointer;
     outline: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
     transition: all 0.3s ease;
+    border: none;
+}
+
+.scroll-to-top img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
 }
 
 .scroll-to-top:hover {

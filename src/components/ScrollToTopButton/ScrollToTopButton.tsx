@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import arrow_app from "../../assets/icons/Arrow_up.svg";
 import './ScrollToTopButton.css'; // Импортируйте CSS для стилизации стрелки
 
 const ScrollToTopButton: React.FC = () => {
@@ -32,7 +33,7 @@ const ScrollToTopButton: React.FC = () => {
         <div>
             {isVisible && (
                 <button className="scroll-to-top" onClick={handleScrollToTop}>
-                    ⇑
+                    <img src={arrow_app} alt="arrow_up" />
                 </button>
             )}
         </div>

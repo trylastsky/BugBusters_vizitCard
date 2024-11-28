@@ -5,12 +5,15 @@ interface Props {
     children: React.ReactNode;
 }
 
-const WithIntersectionObserver: React.FC<Props> = ({ onVisibilityChange, children }) => {
+const WithIntersectionObserver: React.FC<Props> = ({
+    onVisibilityChange,
+    children,
+}) => {
     const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 onVisibilityChange(entry.isIntersecting);
             });
         });

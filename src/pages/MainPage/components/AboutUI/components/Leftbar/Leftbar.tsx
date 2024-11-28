@@ -9,7 +9,6 @@ const Leftbar: React.FC = () => {
                 <div className="case">
                 <h2>О нас</h2>
                 <div className="vertical-line" />
-
                 </div>
                 <img src={logo_dark} alt="logo_dark" />
             </div>

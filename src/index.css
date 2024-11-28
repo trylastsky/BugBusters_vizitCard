@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent; /* Убрать выделение для мобильных браузеров */
-    outline: none; /* Удалить обводку */
+    -webkit-tap-highlight-color: transparent; /* Убрать выделение для мобильных браузеров Мобилка */
+    outline: none; /* Удалить обводку Мобилка */
 }
 
 :root {
