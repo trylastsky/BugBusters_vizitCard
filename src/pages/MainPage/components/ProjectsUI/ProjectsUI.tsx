@@ -4,7 +4,6 @@ import stulus from "../../../../assets/icons/Stylus.svg";
 
 // Импорт изображений проектов
 import web_store_img from "../../../../assets/projects/web_store.png";
-import web_snake_img from "../../../../assets/projects/snake_game.png";
 import vr_game_img from "../../../../assets/projects/vr_game.png";
 import web3_vote_img from "../../../../assets/projects/web3_vote.png";
 import vizitcard_site_img from "../../../../assets/projects/vizitcard_site.png";
@@ -16,7 +15,6 @@ const projects = [
     { id: "web_store", name: "Магазин", image: web_store_img },
     { id: "web3_vote", name: "Платформа для голосований", image: web3_vote_img },
     { id: "vizitcard_site", name: "Сайт визитка", image: vizitcard_site_img },
-    { id: "snake_game", name: "Игра Змейка", image: web_snake_img },
     { id: "vr_game", name: "VR-игра", image: vr_game_img },
 ];
 
